@@ -1,4 +1,5 @@
-def main() -> object:
+def main():
+
     def calc_hours(hours_worked, minutes_worked):
         """Function to convert hours and minutes worked into a number that can be used in pay calculation"""
         hours_minutes = hours_worked + minutes_worked / 60
@@ -25,7 +26,7 @@ def main() -> object:
             total_time = calc_hours(hours, minutes)
 
         pay = calc_pay(total_time, rate)
-        invoices[project_name] = pay
+        invoices[project_name] = total_time, rate, pay
     # TODO: Fix pay format to print out as $x.xx
     print(invoices)
 
